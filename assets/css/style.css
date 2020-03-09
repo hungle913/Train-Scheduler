@@ -4,3 +4,8 @@
     text-align: center;
     margin: auto;
 }
+
+h1 {
+    font-size: 18px;
+    padding-bottom: 30px;
+}
