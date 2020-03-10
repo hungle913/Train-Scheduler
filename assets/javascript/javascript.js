@@ -32,7 +32,10 @@ $(document).ready(function(){
 
     database.ref().push(newTrain),
 
-    
+    console.log(newTrain.name);
+    console.log(newTrain.dest);
+    console.log(newTrain.first);
+    console.log(newTrain.freq);
 
   });
   
