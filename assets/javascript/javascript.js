@@ -15,6 +15,9 @@ $(document).ready(function(){
 
   var database = firebase.database();
 
-  
+  $("#add-train").on("click", function(event) {
+    event.preventDefault();
+    
+  });
   
 });
