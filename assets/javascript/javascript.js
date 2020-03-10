@@ -30,6 +30,10 @@ $(document).ready(function(){
       freq: frequency
     };
 
+    database.ref().push(newTrain),
+
+    
+
   });
   
 });
