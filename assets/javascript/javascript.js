@@ -37,6 +37,8 @@ $(document).ready(function(){
     console.log(newTrain.first);
     console.log(newTrain.freq);
 
+    alert("Train added successfully")
+
   });
   
 });
