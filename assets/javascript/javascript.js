@@ -17,7 +17,14 @@ $(document).ready(function(){
 
   $("#add-train").on("click", function(event) {
     event.preventDefault();
+
+    var trainName = $("#trainName").val().trim();
+    var destination = $("#destination").val().trim();
+    var firstTrain = $("#firstTrain").val().trim();
+    var frequency = $("#frequency").val().trim();
+
     
+
   });
   
 });
