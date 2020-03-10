@@ -23,7 +23,12 @@ $(document).ready(function(){
     var firstTrain = $("#firstTrain").val().trim();
     var frequency = $("#frequency").val().trim();
 
-    
+    var newTrain = {
+      name: trainName,
+      dest: destination,
+      first: firstTrain,
+      freq: frequency
+    };
 
   });
   
