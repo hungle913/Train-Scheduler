@@ -1,6 +1,5 @@
 $(document).ready(function(){
-
-  var firebaseConfig = {
+  var config = {
     apiKey: "AIzaSyAARauqpKNNBNRWUd7b9kYHxvEpNPzeABA",
     authDomain: "bootcamp-16a34.firebaseapp.com",
     databaseURL: "https://bootcamp-16a34.firebaseio.com",
@@ -11,34 +10,35 @@ $(document).ready(function(){
     measurementId: "G-XHSHJSZJ0J"
   };
 
-  firebase.initializeApp(firebaseConfig);
-
+  firebase.initializeApp(config);
   var database = firebase.database();
 
-  $("#add-train").on("click", function(event) {
-    event.preventDefault();
+  // var database = firebase.database();
 
-    var trainName = $("#trainName").val().trim();
-    var destination = $("#destination").val().trim();
-    var firstTrain = $("#firstTrain").val().trim();
-    var frequency = $("#frequency").val().trim();
+  // $("#add-train").on("click", function(event) {
+  //   event.preventDefault();
 
-    var newTrain = {
-      name: trainName,
-      dest: destination,
-      first: firstTrain,
-      freq: frequency
-    };
+  //   var trainName = $("#trainName").val().trim();
+  //   var destination = $("#destination").val().trim();
+  //   var firstTrain = $("#firstTrain").val().trim();
+  //   var frequency = $("#frequency").val().trim();
 
-    database.ref().push(newTrain),
+  //   var newTrain = {
+  //     name: trainName,
+  //     dest: destination,
+  //     first: firstTrain,
+  //     freq: frequency
+  //   };
 
-    console.log(newTrain.name);
-    console.log(newTrain.dest);
-    console.log(newTrain.first);
-    console.log(newTrain.freq);
+  //   database.ref().push(newTrain),
 
-    alert("Train added successfully")
+  //   console.log(newTrain.name);
+  //   console.log(newTrain.dest);
+  //   console.log(newTrain.first);
+  //   console.log(newTrain.freq);
 
-  });
+  //   alert("Train added successfully");
+
+  // });
   
 });
