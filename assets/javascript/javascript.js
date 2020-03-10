@@ -13,6 +13,8 @@ $(document).ready(function(){
 
   firebase.initializeApp(firebaseConfig);
 
+  var database = firebase.database();
 
+  
   
 });
