@@ -45,6 +45,13 @@ $(document).ready(function(){
 
   });
 
+  database.ref().on("child_added", function(childSnapshot) {
+    Console.log(childSnapshot.val());
+
+    
+
+  });
+
 
   
 });
