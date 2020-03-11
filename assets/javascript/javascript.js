@@ -53,6 +53,11 @@ $(document).ready(function(){
     var firstTrain = childSnapshot.val().first;
     var trainFrequency = childSnapshot.val().frequency;
 
+    console.log(trainName);
+    console.log(trainDestination);
+    console.log(firstTrain);
+    console.log(trainFrequency);
+
   });
 
 
