@@ -63,7 +63,13 @@ $(document).ready(function(){
 
     var nextTrain = moment().add(minutesAway, "minutes");
 
-    
+    var newRow = $("<tr>").append(
+      $("<td>").text(trainName),
+      $("<td>").text(trainDestination),
+      $("<td>").text(trainFrequency),
+      $("<td>").text(nextTrain.format("HH:mm")),
+      $("<td>").text(minutesAway)
+    );
 
   });
 
