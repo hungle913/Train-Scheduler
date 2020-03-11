@@ -11,34 +11,33 @@ $(document).ready(function(){
   };
 
   firebase.initializeApp(config);
+
   var database = firebase.database();
 
-  // var database = firebase.database();
+  $("#add-train").on("click", function(event) {
+    event.preventDefault();
 
-  // $("#add-train").on("click", function(event) {
-  //   event.preventDefault();
+    var trainName = $("#train-name").val().trim();
+    var trainDestination = $("#train-destination").val().trim();
+    var firstTrain = $("#first-train").val().trim();
+    var trainFrequency = $("#train-frequency").val().trim();
 
-  //   var trainName = $("#trainName").val().trim();
-  //   var destination = $("#destination").val().trim();
-  //   var firstTrain = $("#firstTrain").val().trim();
-  //   var frequency = $("#frequency").val().trim();
+    var newTrain = {
+      name: trainName,
+      destination: trainDestination,
+      first: firstTrain,
+      frequency: trainFrequency
+    };
 
-  //   var newTrain = {
-  //     name: trainName,
-  //     dest: destination,
-  //     first: firstTrain,
-  //     freq: frequency
-  //   };
+    database.ref().push(newTrain),
 
-  //   database.ref().push(newTrain),
+    console.log(newTrain.name);
+    console.log(newTrain.destination);
+    console.log(newTrain.first);
+    console.log(newTrain.frequency);
 
-  //   console.log(newTrain.name);
-  //   console.log(newTrain.dest);
-  //   console.log(newTrain.first);
-  //   console.log(newTrain.freq);
+    alert("Train added successfully");
 
-  //   alert("Train added successfully");
-
-  // });
+  });
   
 });
