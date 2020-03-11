@@ -61,6 +61,10 @@ $(document).ready(function(){
     var diff = moment().diff(moment(firstTrain, "HH:mm"), "minutes");
     var minutesAway = (diff%freq);
 
+    var nextTrain = moment().add(minutesAway, "minutes");
+
+    
+
   });
 
 
