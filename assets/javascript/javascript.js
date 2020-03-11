@@ -46,7 +46,7 @@ $(document).ready(function(){
   });
 
   database.ref().on("child_added", function(childSnapshot) {
-    Console.log(childSnapshot.val());
+    console.log(childSnapshot.val());
 
     var trainName = childSnapshot.val().name;
     var trainDestination = childSnapshot.val().destination;
@@ -59,7 +59,7 @@ $(document).ready(function(){
     console.log(trainFrequency);
 
     var diff = moment().diff(moment(firstTrain, "HH:mm"), "minutes");
-    var minutesAway = (diff%freq);
+    var minutesAway = (diff%trainFrequency);
 
     var nextTrain = moment().add(minutesAway, "minutes");
 
@@ -70,6 +70,8 @@ $(document).ready(function(){
       $("<td>").text(nextTrain.format("HH:mm")),
       $("<td>").text(minutesAway)
     );
+
+    $("#train-table > tbody").append(newRow);
 
   });
 
