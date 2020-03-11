@@ -48,7 +48,10 @@ $(document).ready(function(){
   database.ref().on("child_added", function(childSnapshot) {
     Console.log(childSnapshot.val());
 
-    
+    var trainName = childSnapshot.val().name;
+    var trainDestination = childSnapshot.val().destination;
+    var firstTrain = childSnapshot.val().first;
+    var trainFrequency = childSnapshot.val().frequency;
 
   });
 
