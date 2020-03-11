@@ -38,6 +38,13 @@ $(document).ready(function(){
 
     alert("Train added successfully");
 
+    $("#train-name").val("");
+    $("#train-destination").val("");
+    $("#first-train").val("");
+    $("#train-frequency").val("");
+
   });
+
+
   
 });
