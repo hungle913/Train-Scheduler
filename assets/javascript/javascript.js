@@ -58,16 +58,18 @@ $(document).ready(function(){
     // console.log(firstTrain);
     // console.log(trainFrequency);
 
-    var timeMoment = moment(firstTrain, "HH:mm")
+    var timeMoment = moment(firstTrain, "HH:mm").format("HH:mm");
+    console.log("Time Converted:" + timeMoment)
+
 
     var diff = moment().diff(moment(firstTrain, "HH:mm"), "minutes");
-    console.log(diff)
+    // console.log(diff)
 
-    var minutesAway = (diff%trainFrequency);
-    console.log(minutesAway)
+    var minutesAway = (diff % trainFrequency);
+    // console.log(minutesAway)
 
     var nextTrain = moment().add(minutesAway, "minutes");
-    console.log(nextTrain)
+    // console.log(nextTrain)
 
     var newRow = $("<tr>").append(
       $("<td>").text(trainName),
