@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var config = {
-    apiKey: "AIzaSyAARauqpKNNBNRWUd7b9kYHxvEpNPzeABA",
+    apiKey: "API KEY GOES HERE",
     authDomain: "bootcamp-16a34.firebaseapp.com",
     databaseURL: "https://bootcamp-16a34.firebaseio.com",
     projectId: "bootcamp-16a34",
